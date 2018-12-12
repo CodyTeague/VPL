@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    <h1>Veeva Pong League Weekly Preview</h1>   
+    <h3>Your Games for the Week of <?= data.weekString ?></h3>
+    <table>
+      <tr>
+       <th>Game #</th>
+       <th>Team A</th>
+       <th>Team B</th>
+     </tr>
+      <? for (var i = 0; i < data.matches.length; i++) { ?>
+        <tr>
+            <td><?= data.matches[i]['gameNumber'] ?></td>
+            <td><?= data.matches[i]['teamA'] ?></td>
+            <td><?= data.matches[i]['teamB'] ?></td>
+        </tr>
+      <? } ?>
+    </table>
+    
+    <h3>Useful Links:</h3>
+    <p>
+      <a href="<?= data.sheetsLink ?>">
+      Google Sheet that Holds Just About Everything</a>
+    </p>
+    <p>
+      <a href="<?= data.formLink ?>">
+      Google Form to Record Your Games</a>
+    </p>
+    <p>
+      <a href="<?= data.formLink ?>">
+      Google Doc Overview of Rules and Other Stuff</a>
+    </p>
+        
+  </body>
+</html>
