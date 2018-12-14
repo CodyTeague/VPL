@@ -11,12 +11,16 @@
        <th>Game #</th>
        <th>Team A</th>
        <th>Team B</th>
+       <th>Opponent One</th>
+       <th>Opponent Two</th>
      </tr>
       <? for (var i = 0; i < data.matches.length; i++) { ?>
         <tr>
             <td><?= data.matches[i]['gameNumber'] ?></td>
             <td><?= data.matches[i]['teamA'] ?></td>
             <td><?= data.matches[i]['teamB'] ?></td>
+            <td><?= data.matches[i]['opponentOne'] ?></td>
+            <td><?= data.matches[i]['opponentTwo'] ?></td>
         </tr>
       <? } ?>
     </table>
